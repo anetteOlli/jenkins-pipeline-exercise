@@ -15,7 +15,7 @@ pipeline {
         stage('Build'){
             steps{
                 echo 'Build'
-                ./gradlew clean test jar
+        
                 echo 'after gradle-thingy'
             }
         }
