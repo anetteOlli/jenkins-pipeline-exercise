@@ -15,13 +15,13 @@ pipeline {
         stage('Build'){
             steps{
                 echo 'Build'
-                sh './gradlew clean test jar --debug'
-                echo 'after gradle-thingy'
+                sh './gradlew clean test jar'
             }
         }
         stage('Results') {
             steps{
                 echo 'Results'
+                jUnit '*/build/test-results/test/TEST-*.xml'
             }
         }
     }
