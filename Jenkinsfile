@@ -21,7 +21,7 @@ pipeline {
         stage('Results') {
             steps{
                 echo 'Results'
-                jUnit '*/build/test-results/test/TEST-*.xml'
+                junit '*/build/test-results/test/TEST-*.xml'
             }
         }
     }
